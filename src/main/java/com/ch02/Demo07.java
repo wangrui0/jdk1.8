@@ -1,7 +1,6 @@
 package com.ch02;
 
 import com.entity.Apple;
-
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -28,12 +27,23 @@ public class Demo07 {
             }
         });
         //1.8以后
-        inventory.sort((Apple o1,Apple o2)->o1.getWeight().compareTo(o2.getWeight()));
+        inventory.sort((Apple o1, Apple o2) -> o1.getWeight().compareTo(o2.getWeight()));
         //1.8以后，是不是越来越强大啦啊
         inventory.sort(Comparator.comparing(Apple::getWeight).thenComparing(Apple::getColor));
     }
+
     /**
      * Runnable
      */
-
+    public static void initThread() {
+        //1.8前
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("aaaaaaa");
+            }
+        });
+        //1.8后
+        Thread thread2 = new Thread(() -> System.out.println("bbbb"));
+    }
 }
