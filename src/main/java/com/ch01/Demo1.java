@@ -21,9 +21,9 @@ public class Demo1 {
 //        outPutHiddenFiles("D:\\mnt");
         //
         List<Apple> apples = new ArrayList<Apple>();
-        apples.add(new Apple("green", 2.5));
-        apples.add(new Apple("green", 3.5));
-        apples.add(new Apple("yellow", 4.5));
+        apples.add(new Apple("green", 2));
+        apples.add(new Apple("green", 3));
+        apples.add(new Apple("yellow", 4));
         List<Apple> result = filterGreenApples(apples);
         for (Apple apple :
                 result) {
