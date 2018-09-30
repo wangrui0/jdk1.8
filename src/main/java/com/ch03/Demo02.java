@@ -31,7 +31,10 @@ public class Demo02 {
     }
 
     /**
-     * 处理文件
+     * 在理想的情况下，你要重用执行设置和清理的代码，并告诉
+     * processFile方法对文件执行不同的操作。这听起来是不是很耳熟？是的，你需要把
+     * processFile的行为参数化。你需要一种方法把行为传递给processFile，以便它可以利用
+     * BufferedReader执行不同的行为
      *
      * @return
      */
