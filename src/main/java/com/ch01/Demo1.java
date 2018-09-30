@@ -1,20 +1,26 @@
-package main.java.com.ch01;
+package com.ch01;
 
-import main.java.com.ch01.entity.Apple;
 import java.io.File;
 import java.util.ArrayList;
+
+import com.entity.Apple;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
 /**
  * jdk1.8体验
+ * 你甚至都不需要为只用一次的方法写定义；代码更干净、更清晰，因为你用不着去找
+ * 自己到底传递了什么代码。但要是Lambda的长度多于几行（它的行为也不是一目了然）的话，
+ * 那你还是应该用方法引用来指向一个有描述性名称的方法，而不是使用匿名的Lambda。你应该
+ * 以代码的清晰度为准绳。
  */
 public class Demo1 {
     public static void main(String[] args) {
         //打印文件夹下的隐藏的文件
 //        outPutHiddenFiles("D:\\mnt");
         //
-        List<Apple> apples = new ArrayList<>();
+        List<Apple> apples = new ArrayList<Apple>();
         apples.add(new Apple("green", 2.5));
         apples.add(new Apple("green", 3.5));
         apples.add(new Apple("yellow", 4.5));

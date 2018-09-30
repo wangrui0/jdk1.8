@@ -1,10 +1,10 @@
-package main.java.com.ch01.entity;
+package com.entity;
 
 public class Apple {
     private String color;
-    private double weight;
+    private Integer weight;
 
-    public Apple(String color, double weight) {
+    public Apple(String color, Integer weight) {
         this.color = color;
         this.weight = weight;
     }
@@ -17,11 +17,11 @@ public class Apple {
         this.color = color;
     }
 
-    public double getWeight() {
+    public Integer getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(Integer weight) {
         this.weight = weight;
     }
 
