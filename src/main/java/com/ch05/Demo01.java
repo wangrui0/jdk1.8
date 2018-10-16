@@ -17,6 +17,8 @@ public class Demo01 {
         List<Integer> eventNumbers = filter02(numbers);
         List<Dish> dishes2 = filter03(menues);
         List<Dish> dishes3 = filter04(menues);
+        List<Dish> meatDish = filterMeat(menues);
+
     }
 
     /**
@@ -55,5 +57,12 @@ public class Demo01 {
      */
     public static List<Dish> filter04(List<Dish> numbers) {
         return numbers.stream().filter(dish -> dish.getCalories() > 300).skip(2).collect(Collectors.toList());
+    }
+
+    /**
+     * 筛选前两个荤菜
+     */
+    public static List<Dish> filterMeat(List<Dish> numbers) {
+        return numbers.stream().filter(dish -> Dish.Type.MEAT.equals(dish.getType())).limit(2).collect(Collectors.toList());
     }
 }
