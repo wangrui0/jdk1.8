@@ -1,22 +1,32 @@
 package com.entity;
 
 public class Dish {
-    private Integer calories;
-    private String name;
-
-    public Integer getCalories() {
-        return calories;
-    }
-
-    public void setCalories(Integer calories) {
+    private final String name;
+    private final boolean vegetarian;
+    private final int calories;
+    private final Type type;
+    public Dish(String name, boolean vegetarian, int calories, Type type) {
+        this.name = name;
+        this.vegetarian = vegetarian;
         this.calories = calories;
+        this.type = type;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public boolean isVegetarian() {
+        return vegetarian;
     }
+
+    public int getCalories() {
+        return calories;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public enum Type { MEAT, FISH, OTHER }
 }
