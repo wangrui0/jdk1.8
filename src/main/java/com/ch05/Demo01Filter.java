@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 /**
  * 筛选和切片
  */
-public class Demo01 {
+public class Demo01Filter {
     public static void main(String[] args) {
         List<Dish> menues = Arrays.asList(new Dish("rice", true, 12, Dish.Type.FISH), new Dish("meat", false, 12, Dish.Type.FISH), new Dish("dog", true, 12, Dish.Type.FISH));
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 1, 2, 4);
