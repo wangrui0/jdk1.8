@@ -38,7 +38,8 @@ public class SumDemo {
 //        test01(transactions);
 //        test02(transactions);
 //        test03(transactions);
-        test04(transactions);
+//        test04(transactions);
+        test05(transactions);
     }
 
     /**
@@ -91,7 +92,6 @@ public class SumDemo {
      * 打印生活在剑桥的交易员的所有交易额
      */
     public static void test06(List<Transaction> transactions) {
-
     }
 
     /**
