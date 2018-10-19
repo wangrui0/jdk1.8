@@ -1,4 +1,4 @@
-package com.ch05;
+package com.ch05.match;
 
 import com.entity.Dish;
 
@@ -11,7 +11,7 @@ import java.util.Optional;
  * 另一个常见的数据处理套路是看看数据集中的某些元素是否匹配一个给定的属性。Stream
  * API通过allMatch、anyMatch、noneMatch、findFirst和findAny方法提供了这样的工具。
  */
-public class Dem03Match {
+public class Demo03Match {
     public static void main(String[] args) {
         List<Dish> menues = Arrays.asList(new Dish("rice", true, 10000, Dish.Type.FISH), new Dish("meat", false, 20000, Dish.Type.FISH), new Dish("dog", true, 30000, Dish.Type.FISH));
         test01(menues);

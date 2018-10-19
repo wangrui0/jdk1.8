@@ -1,4 +1,4 @@
-package com.ch05;
+package com.ch05.filter;
 
 import com.entity.Dish;
 

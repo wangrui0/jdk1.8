@@ -1,4 +1,4 @@
-package com.ch05;
+package com.ch05.map;
 
 import com.entity.Dish;
 
@@ -13,7 +13,7 @@ import java.util.stream.Stream;
  * 一个非常常见的数据处理套路就是从某些对象中选择信息。比如在SQL里，你可以从表中选
  * 择一列。Stream API也通过map和flatMap方法提供了类似的工具。
  */
-public class Dem02Map {
+public class Demo02Map {
     public static void main(String[] args) {
 //        methord01();
 //        methord02();
