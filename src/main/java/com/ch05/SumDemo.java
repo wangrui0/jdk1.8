@@ -117,6 +117,7 @@ public class SumDemo {
         if (minValue.isPresent()) {
             System.out.println(minValue.get());
         }
-    }
+        Optional<Transaction> minValue2 = transactions.stream().min(Comparator.comparing(Transaction::getValue));
 
+    }
 }
