@@ -3,10 +3,7 @@ package com.ch05;
 import com.entity.Trader;
 import com.entity.Transaction;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -21,6 +18,7 @@ import java.util.stream.Collectors;
  * (8) 找到交易额最小的交易。
  */
 public class SumDemo {
+
     public static void main(String[] args) {
         Trader raoul = new Trader("Raoul", "Cambridge");
         Trader mario = new Trader("Mario", "Milan");
@@ -39,7 +37,10 @@ public class SumDemo {
 //        test02(transactions);
 //        test03(transactions);
 //        test04(transactions);
-        test05(transactions);
+//        test05(transactions);
+//        test06(transactions);
+        test07(transactions);
+        test08(transactions);
     }
 
     /**
@@ -92,20 +93,30 @@ public class SumDemo {
      * 打印生活在剑桥的交易员的所有交易额
      */
     public static void test06(List<Transaction> transactions) {
+        Optional<Integer> sumValue = transactions.stream().filter(transaction -> transaction.getTrader().getCity().equals("Cambridge")).map(Transaction::getValue).reduce(Integer::sum);
+        if (sumValue.isPresent()) {
+            System.out.println(sumValue.get());
+        }
     }
 
     /**
      * 所有交易中，最高的交易额是多少？
      */
     public static void test07(List<Transaction> transactions) {
-
+        Optional<Integer> maxValue = transactions.stream().map(Transaction::getValue).reduce(Integer::max);
+        if (maxValue.isPresent()) {
+            System.out.println(maxValue.get());
+        }
     }
 
     /**
      * 找到交易额最小的交易。
      */
     public static void test08(List<Transaction> transactions) {
-
+        Optional<Integer> minValue = transactions.stream().map(Transaction::getValue).reduce(Integer::min);
+        if (minValue.isPresent()) {
+            System.out.println(minValue.get());
+        }
     }
 
 }
