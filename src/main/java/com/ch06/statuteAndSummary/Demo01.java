@@ -1,9 +1,8 @@
-package com.ch06;
+package com.ch06.statuteAndSummary;
 
 import com.entity.Dish;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static java.util.Comparator.comparing;
 import static java.util.Comparator.comparingInt;

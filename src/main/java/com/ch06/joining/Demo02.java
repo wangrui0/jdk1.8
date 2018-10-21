@@ -1,4 +1,4 @@
-package com.ch06;
+package com.ch06.joining;
 
 import com.entity.Dish;
 
