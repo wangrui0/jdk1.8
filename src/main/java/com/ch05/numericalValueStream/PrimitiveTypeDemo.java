@@ -37,12 +37,13 @@ public class PrimitiveTypeDemo {
     }
 
     /**
-     *  转换回对象流:
-     *  同样，一旦有了数值流，你可能会想把它转换回非特化流。例如，IntStream上的操作只能
+     * 转换回对象流:
+     * 同样，一旦有了数值流，你可能会想把它转换回非特化流。例如，IntStream上的操作只能
      * 产生原始整数： IntStream 的 map 操作接受的 Lambda 必须接受 int 并返回 int （一个
      * IntUnaryOperator）。但是你可能想要生成另一类值，比如Dish。为此，你需要访问Stream
      * 接口中定义的那些更广义的操作。要把原始流转换成一般流（每个int都会装箱成一个
      * Integer），可以使用boxed方法，如下所示：
+     *
      * @param menues
      */
 
@@ -60,23 +61,16 @@ public class PrimitiveTypeDemo {
      * Integer、String等参考类型来参数化。对于三种原始流特化，也分别有一个Optional原始类
      * 型特化版本：OptionalInt、OptionalDouble和OptionalLong;
      * 例如，要找到IntStream中的最大元素，可以调用max方法，它会返回一个OptionalInt：
+     *
      * @param menues
      */
     public static void test03(List<Dish> menues) {
         OptionalInt max = menues.stream().mapToInt(Dish::getCalories).max();
-        if(max.isPresent()){
-            System.out.println("有最大值"+max.getAsInt());
-        }else{
+        if (max.isPresent()) {
+            System.out.println("有最大值" + max.getAsInt());
+        } else {
             int defaultValue = max.orElse(1);
-            System.out.println("没有最大值，采用默认的最大值"+defaultValue);
+            System.out.println("没有最大值，采用默认的最大值" + defaultValue);
         }
-    }
-
-    public static void test04(List<Dish> menues) {
-
-    }
-
-    public static void test05(List<Dish> menues) {
-
     }
 }
