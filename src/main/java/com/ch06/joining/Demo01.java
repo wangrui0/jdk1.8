@@ -11,7 +11,7 @@ import static java.util.stream.Collectors.joining;
 /**
  * 连接字符串
  */
-public class Demo02 {
+public class Demo01 {
     public static void main(String[] args) {
         List<Dish> menues = Arrays.asList(new Dish("rice", true, 10000, Dish.Type.FISH), new Dish("meate", false, 20000, Dish.Type.FISH), new Dish("dog", true, 30000, Dish.Type.FISH));
         test01(menues);

@@ -10,6 +10,7 @@ import static java.util.Comparator.comparingInt;
 import static java.util.stream.Collectors.*;
 
 /**
+ * 分组：
  * 一个常见的数据库操作是根据一个或多个属性对集合中的项目进行分组。就像前面讲到按货
  * 币对交易进行分组的例子一样，如果用指令式风格来实现的话，这个操作可能会很麻烦、啰嗦而
  * 且容易出错。但是，如果用Java 8所推崇的函数式风格来重写的话，就很容易转化为一个非常容
